@@ -114,7 +114,7 @@ public class PersonController {
 	public ResponseEntity<Person> rest_save(
 			@RequestBody Person person
 	) {
-		// Wenn das Feld created der Instanz boot null ist,
+		// Wenn das Feld created der Instanz person null ist,
 		// dann wird das aktuelle Datum in dieses Feld geschrieben
 		if (person.getCreated() == null) {
 			person.setCreated(LocalDateTime.now());
