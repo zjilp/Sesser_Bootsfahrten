@@ -8,13 +8,20 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import java.util.Collections;
+
 @SpringBootApplication
 public class FahrtenbuchApplication {
 	@SuppressWarnings("unused")
 	private static Logger log = LogManager.getLogger(FahrtenbuchApplication.class);
 
 	public static void main(String[] args) {
-		SpringApplication.run(FahrtenbuchApplication.class, args);
+
+		SpringApplication app = new SpringApplication(FahrtenbuchApplication.class);
+		app.setDefaultProperties(Collections
+				.singletonMap("server.port", "8083"));
+		app.run(args);
+
 	}
 
 	@Bean
