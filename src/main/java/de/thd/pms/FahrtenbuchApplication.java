@@ -19,7 +19,7 @@ public class FahrtenbuchApplication {
 
 		SpringApplication app = new SpringApplication(FahrtenbuchApplication.class);
 		app.setDefaultProperties(Collections
-				.singletonMap("server.port", "8083"));
+				.singletonMap("server.port", "80"));
 		app.run(args);
 
 	}
