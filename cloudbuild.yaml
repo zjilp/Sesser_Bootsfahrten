@@ -18,7 +18,7 @@ steps:
       - '$_SERVICE_NAME'
       - '--image'
       - 'gcr.io/$PROJECT_ID/$_SERVICE_NAME:$COMMIT_SHA'
-      - '--region1'
+      - '--region'
       - '$_DEPLOY_REGION'
 options:
   logging: CLOUD_LOGGING_ONLY
